@@ -9,7 +9,7 @@ fn random_line(width: u16, mut rng: ThreadRng) -> String {
     let mut res = String::new();
 
     for _ in 0..width {
-        let print_or_not = rng.gen_range(0, 5) == 1 ;
+        let print_or_not = rng.gen_range(0, 3) == 1 ;
         let n = rng.gen_range(0, 2);
 
         if print_or_not {
@@ -23,7 +23,7 @@ fn random_line(width: u16, mut rng: ThreadRng) -> String {
     res
 }
 
-static DEFAULT_DELAY: u64 = 15;
+static DEFAULT_DELAY: u64 = 25;
 
 fn main() {
 
